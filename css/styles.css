@@ -1,0 +1,217 @@
+:root{
+	box-sizing: border-box;
+	font-size: calc(1vw + 0.7em);
+}
+
+body{
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/********** LINKS ***********/
+
+a:link{
+	color: #1476bb;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:visited{
+	color: #1414bb;
+}
+a:hover{
+	text-decoration: underline;
+}
+a:active{
+	color: #b45514;
+}
+
+/********** HEADER ***********/
+
+header{
+	padding: 0.5em 1em;
+	background: #fff;
+}
+.title > h1{
+	color: #333;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	margin: 0.25em 0;
+}
+.slogan{
+	color: #888;
+	font-size: 0.75em;
+	margin: 0;
+}
+
+/********** MENU ***********/
+
+.menu{
+	position: relative;
+}
+.menu-toggle{
+	position: absolute;
+	top: -1.47em;
+	right: 0.1em;
+	border: 0;
+	background-color: transparent;
+	font-size: 3.1em;
+	width: 1em;
+	height: 1em;
+	line-height: 0.3em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 5em;
+}
+.menu-toggle::after{
+	position: absolute;
+	top: 0.61em;
+	left: 0.1em;
+	display: block;
+	content: "\2261";
+	text-indent: 0; 
+	cursor: pointer;
+}
+.menu-dropdown{
+	display: none;
+	position: relative;
+	right: 0;
+	left: 0;
+	margin: 0;
+}
+.menu.is-open .menu-dropdown{
+	display: block;
+}
+.nav-menu{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ccc;
+	background: #000;
+	color: #fff; 
+}
+.nav-menu > li + li{
+	border-top: 1px solid #ccc;
+}
+.nav-menu > li > a{
+	display: block;
+	padding: 0.7em 1em;
+	color: #fff;
+	font-weight: bold;
+}
+
+
+/********** ASIDE ***********/
+
+.hero{
+	padding: 2em 1.5em;
+	text-align: center;
+	background: url(../img/coffee-beans-small.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: #fff;
+	text-shadow: 0.1em 0.1em 0.1em #000;
+}
+
+/********** MAIN ***********/
+
+main{
+	padding: 1.2em;
+}
+.subtitle{
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/********** FOOTER ***********/
+
+footer{
+	background: #000;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	height: 3em;
+	position: relative;
+}
+footer p{
+	text-align: right;
+	padding-right: 2em;
+	padding-left: auto;
+	margin: 0;
+	color: #fff;
+	display: inline-block;
+	position: absolute;
+	right: 0.2em;
+	top: 0.8em;
+}
+
+
+/********** MEDIA ***********/
+
+@media (min-width: 700px){
+	.title > h1{
+		font-size: 2.2rem;
+	}
+	.hero{
+		padding: 1.3rem; 
+	}
+	.menu-toggle{
+		display: none;
+	}
+	.menu-dropdown{
+		display: block;
+		position: static;
+	}
+	.nav-menu{
+		display: flex;
+		border: none;
+		padding: 0 1.5em;
+		list-style-type: none;
+	}
+	.nav-menu > li{
+		flex: 1;
+	}
+	.nav-menu > li + li{
+		border: none;
+	}
+	.nav-menu > li > a{
+		padding: 0.7em;
+		text-align: center;
+	}
+	.row{
+		display: flex;
+		margin-left: -.75em;
+		margin-right: -.75em;
+	}
+	.column{
+		flex: 1;
+		margin-left: .75em;
+		margin-right: .75em;	
+	}
+}
+@media (min-width: 35em){
+	.hero{
+		padding: 5em 3em;
+		font-size: 1.2rem;
+		background: url(../img/coffee-beans-medium.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+}
+@media (min-width: 50em){
+	.page-header{
+		padding: 1.4em 4.5em;
+	}
+	.hero{
+		padding: 7.5em 6em;
+		background: url(../img/coffee-beans-medium.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	.main{
+		padding: 3em 5em;
+	}
+	:root{
+		font-size: 1.3em;
+	}
+}
